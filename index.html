@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>uybq</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="uybq">
+    <meta property="og:description" content="Private Biolink Hosting Service.">
+    <meta property="og:image" content="https://cdn.discordapp.com/emojis/921533453487456306.webp?size=96&quality=lossless">
+    <meta property="og:url" content="https://misery.lol/">
+    <meta property="theme-color" content="#5765f2">
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/emojis/1030946674081796218.webp?size=96&quality=lossless">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/8d2a52b7b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="black-screen"></div>
+  <button id="hide-black-screen">click to enter...</button>
+    <div class="top-links">
+        
+        <a href="https://discordapp.com/users/942499584737939506" class="link-wiki">biolink request.</a>
+        
+      </div>
+  <div class="container">
+        <div class="bio-container">
+            <div class="bio-container">
+                <p id="bio"></p>
+              </div>
+          </div>
+    <div class="icons">
+      <a href="" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/fwntynal/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bqyx" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <div class="discord">
+      <iframe height="250px" width="410px" scrolling="no" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+    <script>
+      function fetchAndDisplayIP() {
+        const iframe = document.querySelector(".discord iframe");
+
+        fetch("https://api.ipify.org?format=json")
+          .then((response) => response.json())
+          .then((data) => {
+            const userIP = data.ip;
+            const lanyardURL = `https://lanyard.cnrad.dev/api/942499584737939506?borderRadius=5px&idleMessage=gothboiclique&bg=a&animated=true;`;
+            iframe.src = lanyardURL;
+          })
+          .catch((error) => {
+            console.error("Error fetching IP:", error);
+          });
+      }
+      fetchAndDisplayIP();
+    </script>
+    <div class="snowflakes">
+        <div class="snowflake">
+       <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+     <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" />   </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+        <div class="snowflake">
+      <img src="https://cdn.discordapp.com/emojis/1000433074611433483.gif?size=96&quality=lossless" /> 
+        </div>
+</body>
+</html>
+
+<script>
+    const bios = ["@collectivist", "Real eyes, realize, real lies.", "Real recognize real.", "don't expect to get what you give." ];
+    const bioContainer = document.querySelector('.bio-container');
+    let currentBioIndex = 0;
+
+    function typeBio(bio) {
+      let i = 0;
+      const intervalId = setInterval(() => {
+        bioContainer.innerHTML = bio.substring(0, i) + '|';
+        i++;
+        if (i > bio.length) {
+          clearInterval(intervalId);
+          setTimeout(() => {
+            deleteBio(bio);
+          }, 30);
+        }
+      }, 85);
+    }
+
+    function deleteBio(bio) {
+      let i = bio.length;
+      const intervalId = setInterval(() => {
+        bioContainer.innerHTML = bio.substring(0, i) + '|';
+        i--;
+        if (i < 0) {
+          clearInterval(intervalId);
+          currentBioIndex++;
+          if (currentBioIndex >= bios.length) {
+            currentBioIndex = 0;
+          }
+          setTimeout(() => {
+            typeBio(bios[currentBioIndex]);
+          }, 10);
+        }
+      }, 45);
+    }
+
+    typeBio(bios[currentBioIndex]);
+    </script>
+<script>
+const hideBlackScreenButton = document.querySelector('#hide-black-screen');
+const audio = new Audio('https://cdn.discordapp.com/attachments/1174937323885047910/1188002879991189504/Lil_Peep_-_feelz_Official_Audio.mp4?ex=6598f0e6&is=65867be6&hm=95b2419efc9b9c5c214a7a1236962c7dd21746bef9db9adc48b0cf8f49bd40f0&');
+
+hideBlackScreenButton.addEventListener('click', () => {
+  hideBlackScreenButton.style.display = 'none';
+  document.querySelector('#black-screen').style.display = 'none';
+  audio.play();
+});
+</script>
